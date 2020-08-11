@@ -9,8 +9,8 @@ Conductor::Conductor(std::string _nombre, std::string _id) {
 	id = _id;
 }
 
-std::string Conductor::get_nombre()
-void Conductor::set_nombre(std::string)
+std::string Conductor::get_nombre(){}
+void Conductor::set_nombre(std::string){}
 
-std::string Conductor::get_id()
-void Conductor::set_id(std::string)
+std::string Conductor::get_id(){}
+void Conductor::set_id(std::string){}

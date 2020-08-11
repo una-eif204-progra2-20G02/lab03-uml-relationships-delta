@@ -12,4 +12,4 @@ Motor *Vehiculo::getMotor() const {return _motor;}
 Conductor *Vehiculo::getConductor() const {return _conductor;}
 int Vehiculo::getPlaca() const {return placa;}
 
-int Vehiculo::to_string() const {}
+std::string Vehiculo::to_string() const {}
