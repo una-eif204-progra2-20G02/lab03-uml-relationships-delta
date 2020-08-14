@@ -12,7 +12,7 @@ class Bus {
 
   public:
   Bus(double = 0, int = 0);
-  Bus(double,int,Vehiculo);
+  Bus(double,int,int,Motor,Conductor);
 
   double get_tarifa();
   void set_tarifa(double);

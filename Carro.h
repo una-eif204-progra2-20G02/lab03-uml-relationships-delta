@@ -15,7 +15,7 @@ class Carro : public Vehiculo{
   public:
   Carro();
   Carro(string,string);
-  Carro(string,string,Vehiculo);
+  Carro(string,string,int,Motor,Conductor);
 
   string get_marca();
   string get_modelo();
