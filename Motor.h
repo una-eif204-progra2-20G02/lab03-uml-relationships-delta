@@ -1,21 +1,23 @@
 #ifndef BASIC_00_EXAMPLE_MOTOR_H
 #define BASIC_00_EXAMPLE_MOTOR_H
-#include<string>
+#include<iostream>
+using namespace std;
 
 class Motor {
 
  int cilindraje;
- std::string marca;
+ string marca;
 
  public:
-	 Motor(int = 0, std::string = " ");
+	 Motor(int = 0, string = " ");
 
-	 std::string get_marca();
-	 void set_marca(std::string);
+	 string get_marca();
+	 void set_marca(string);
 
 	 int get_cilindraje();
 	 void set_cilindraje(int);
 };
+
 
 
 #endif //BASIC_00_EXAMPLE_MOTOR_H

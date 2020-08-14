@@ -25,5 +25,5 @@ public:
     Conductor *getConductor() const;
     int getPlaca() const;
 
-    virtual std::string to_string()const;
+    virtual std::string to_string()const = 0;
 };

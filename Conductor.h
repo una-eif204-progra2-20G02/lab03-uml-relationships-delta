@@ -1,19 +1,20 @@
 #ifndef BASIC_00_EXAMPLE_CONDUCTOR_H
 #define BASIC_00_EXAMPLE_CONDUCTOR_H
-#include<string>
+#include<iostream>
+using namespace std;
 
 class Conductor {
-  std::string nombre;
-	std::string id;
+  string nombre;
+	string id;
 
 public:
-	Conductor(std::string = " ", std::string = " ");
+	Conductor(string = " ", string = " ");
 
-	std::string get_nombre();
-	void set_nombre(std::string);
+	string get_nombre();
+	void set_nombre(string);
 
-	std::string get_id();
-	void set_id(std::string);
+	string get_id();
+	void set_id(string);
 };
 
 
