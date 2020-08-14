@@ -5,7 +5,7 @@
     tarifa=_tarifa;
     cant_asientos=_asientos;
   }
-  Bus::Bus(double _tarifa,int _asientos,Vehiculo v){
+  Bus::Bus(double _tarifa,int _asientosint,int _placa,Motor m,Conductor c) : Vehiculo(_placa,m,c){
     tarifa=_tarifa;
     cant_asientos=_asientos;
   }

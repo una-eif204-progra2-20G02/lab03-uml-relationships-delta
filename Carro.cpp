@@ -8,7 +8,7 @@
    marca = mar;
    modelo = mod;
  }
- Carro::Carro(string mar,string mod,Vehiculo* vehiculo){
+ Carro::Carro(string mar,string mod,int _placa,Motor m,Conductor c) : Vehiculo(_placa,m,c){
    marca=mar;
    modelo=mod;
  }
