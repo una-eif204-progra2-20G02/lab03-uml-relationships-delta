@@ -1,2 +1,2 @@
 ##Diagrama de Clases
-![UML](diagram\UML-Lab-3.png)
+![UML](diagram\Clase UML.png)
