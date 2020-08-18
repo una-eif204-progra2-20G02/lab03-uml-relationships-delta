@@ -11,7 +11,10 @@ double Bus::getTarifa() const {return tarifa;}
 int Bus::getCantAsientos() const {return cant_asientos;}
 
 string Bus::to_string() const{
-    stringstream b;
+    stringstream b;Conductor*punt;Motor*mo;
+    b<<"Conductor: "<<punt->get_id()<<", "<<punt->get_nombre()<<endl;
+    b<<"Placa: "<<getPlaca();
+    b<<"Marca del Motor: "<<mo->get_marca();
     b<<"Tarifa: "<<tarifa<<endl;
     b<<"Cantidad Asientos: "<<cant_asientos<<endl;
     return b.str();
