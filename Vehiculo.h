@@ -8,20 +8,20 @@
 #include "Conductor.h"
 
 class Vehiculo{
-    Motor*_motor;
+    Motor _motor;
     Conductor*_conductor;
     int placa;
 public:
     Vehiculo();
     Vehiculo(Motor,Conductor,int);
-    Vehiculo(Motor *motor, Conductor *conductor, int placa);
+    Vehiculo(Motor, Conductor *conductor, int placa);
     ~Vehiculo();
 
-    void setMotor(Motor *motor);
+    void setMotor(Motor motor);
     void setConductor(Conductor *conductor);
     void setPlaca(int placa);
 
-    Motor *getMotor() const;
+    Motor getMotor() const;
     Conductor *getConductor() const;
     int getPlaca() const;
 

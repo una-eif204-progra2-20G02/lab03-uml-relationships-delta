@@ -1,24 +1,18 @@
 #include "Bus.h"
 #include<sstream>
 
-  Bus::Bus(double _tarica, int _asientos){
-    tarifa=_tarifa;
-    cant_asientos=_asientos;
-  }
-  Bus::Bus(double _tarifa,int _asientosint,int _placa,Motor m,Conductor c) : Vehiculo(_placa,m,c){
-    tarifa=_tarifa;
-    cant_asientos=_asientos;
-  }
+Bus::Bus(const Motor &motor, Conductor *conductor, int placa, double tarifa, int cantAsientos) :
+Vehiculo(motor,conductor,placa),tarifa(tarifa),cant_asientos(cantAsientos) {}
 
-  double Bus::get_tarifa(){return tarifa;}
-  void Bus::set_tarifa(double x){tarifa=x;}
+void Bus::setTarifa(double tarifa) {Bus::tarifa = tarifa;}
+void Bus::setCantAsientos(int cantAsientos) {cant_asientos = cantAsientos;}
 
-  int Bus::get_cant_asientos(){return cant_asientos;}
-  void Bus::set_cant_asientos(int x){cant_asientos=x;}
-  
-  string Bus::to_string()override{
-    stringstream s;
-    s<<"Tarifa : "<<get_tarifa()<<endl;
-    s<<"Cantidad de asientos : "<<get_cant_asientos()<<endl;
-    return s.str();
-  }
+double Bus::getTarifa() const {return tarifa;}
+int Bus::getCantAsientos() const {return cant_asientos;}
+
+string Bus::to_string() const{
+    stringstream b;
+    b<<"Tarifa: "<<tarifa<<endl;
+    b<<"Cantidad Asientos: "<<cant_asientos<<endl;
+    return b.str();
+}

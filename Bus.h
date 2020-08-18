@@ -4,7 +4,7 @@
 #include"Vehiculo.h"
 using namespace std;
 
-class Bus {
+class Bus: Vehiculo {
 
   private:
    double tarifa;
@@ -12,18 +12,15 @@ class Bus {
 
   public:
   Bus(double = 0, int = 0);
-  Bus(double,int,int,Motor,Conductor);
+  Bus(const Motor &motor, Conductor *conductor, int placa, double tarifa, int cantAsientos);
 
-  double get_tarifa();
-  void set_tarifa(double);
+  void setTarifa(double tarifa);
+  void setCantAsientos(int cantAsientos);
 
-  int get_cant_asientos();
-  void set_cant_asientos(int);
-  
-  string to_string()override;
+  double getTarifa() const;
+  int getCantAsientos() const;
 
-
+  string to_string() const override;
 };
-
 
 #endif //BASIC_00_EXAMPLE_BUS_H

@@ -8,10 +8,9 @@
    marca = mar;
    modelo = mod;
  }
- Carro::Carro(string mar,string mod,int _placa,Motor m,Conductor c) : Vehiculo(_placa,m,c){
-   marca=mar;
-   modelo=mod;
- }
+
+Carro::Carro(const Motor &motor, Conductor *conductor, int placa, const string &marca, const string &modelo,Vehiculo *vehiculo):
+        Vehiculo(motor, conductor, placa), marca(marca), modelo(modelo),vehiculo(vehiculo) {}
 
  string Carro::get_marca(){return marca;}
  string Carro::get_modelo(){return modelo;}
@@ -23,7 +22,7 @@
    modelo=mod;
  }
   
-  string Carro::to_string() override{
+  string Carro::to_string() const {
     stringstream s;
     s<<"Marca: "<<marca<<endl;
     s<<"Modelo: "<<modelo<<endl;

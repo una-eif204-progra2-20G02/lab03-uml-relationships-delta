@@ -15,15 +15,15 @@ class Carro : public Vehiculo{
   public:
   Carro();
   Carro(string,string);
-  Carro(string,string,int,Motor,Conductor);
+  Carro(const Motor &motor, Conductor *conductor, int placa, const string &marca, const string &modelo,Vehiculo *vehiculo);
 
   string get_marca();
   string get_modelo();
   
   void set_marca(string);
-  void set_modelo(string):
+  void set_modelo(string);
   
-  string to_string() override;
+  string to_string () const override;
 };
 
 
